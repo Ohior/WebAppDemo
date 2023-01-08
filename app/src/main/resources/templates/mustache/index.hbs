@@ -1,0 +1,28 @@
+<html>
+<body>
+<div>
+    <h3>Create Todos</h3>
+    <form action="/todos/add" method="post">
+        <p><label>title</label>
+            <input type="text" name="title">
+        </p>
+
+        <p><label>comment</label>
+            <textarea name="comment"></textarea>
+        </p>
+        <p>
+            <input type="submit">
+        </p>
+    </form>
+</div>
+<h1>
+    {{#todos}}
+        <ul>title: {{title}}
+            <li>details: {{comment}}</li>
+            <li>data: {{date}}</li>
+        </ul>
+        <hr>
+    {{/todos}}
+</h1>
+</body>
+</html>
